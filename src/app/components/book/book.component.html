@@ -1,0 +1,30 @@
+<mat-card *ngIf="books" class="card">
+    <mat-card-header>
+      <mat-card-subtitle>{{books.authors[0]?.name}}</mat-card-subtitle>
+      <mat-card-title>{{books.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      
+      <p>{{ books.subjects[0] }}</p>
+   
+      <div class="spacer"> </div>
+         <hr>
+    </mat-card-content>
+    <mat-card-actions>
+        <a routerLink="/book-details/{{books.id}}"> <mat-icon> info </mat-icon> </a>
+      
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+    <mat-card-footer>
+    
+    </mat-card-footer>
+  </mat-card>
+  
+
+
+
+
+
+
+
+
