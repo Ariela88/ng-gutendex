@@ -15,7 +15,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
-import { SearchComponent } from './components/search/search.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { SearchComponent } from './components/search/search.component';
     MainComponent,
     HeaderComponent,
     BookDetailsComponent,
-    SearchComponent
+   
   ],
   imports: [
     BrowserModule,
