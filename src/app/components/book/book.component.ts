@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Author, Book, Formats } from 'src/app/model/book';
 import { Router } from '@angular/router';
+import { StorageService } from 'src/app/service/storage.service';
 
 
 @Component({
@@ -10,11 +11,13 @@ import { Router } from '@angular/router';
 })
 export class BookComponent {
 
-  constructor(private router: Router){}
+  constructor(private router: Router, public storage:StorageService){}
 
   @Input() books?: Book;
   @Input() authors?: Author;
   @Input() formats?: Formats;
+  @Input() isFavourite: boolean = false;
+  @Input() bColor: string = 'white';
 
 
   viewDetails(bookId: number) {

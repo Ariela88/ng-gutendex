@@ -14,6 +14,7 @@ export class BookDetailsComponent implements OnInit {
   
 
   book?:Book;
+  
 
   constructor(private route:ActivatedRoute, private dataServ: DataService, private router:Router){}
 

@@ -1,6 +1,6 @@
-<mat-card *ngIf="books" class="card">
+<mat-card *ngIf="books" class="card"  [ngStyle]="{backgroundColor: bColor}">
     <mat-card-header>
-      <mat-card-subtitle>{{books.authors[0]?.name}}</mat-card-subtitle>
+      <mat-card-subtitle *ngIf="authors">{{authors.name}}</mat-card-subtitle>
       <mat-card-title>{{books.title}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
@@ -11,9 +11,10 @@
          <hr>
     </mat-card-content>
     <mat-card-actions>
-        <a routerLink="/book-details/{{books.id}}"> <mat-icon> info </mat-icon> </a>
+        <a routerLink="/book-details/{{books.id}}"> DETTAGLI </a>
       
-      <button mat-button>SHARE</button>
+        <button (click)="storage.toggleFavourites(books)">{{storage.isFavourite(books)?'rimuovi':'salva'}}</button>
+      
     </mat-card-actions>
     <mat-card-footer>
     

@@ -2,14 +2,21 @@
    
     <span><a routerLink="/home/">Gutendex </a> </span>
     <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
+  
+    <a routerLink="./favourites">I miei Preferiti ({{(storage.favouritesSubject | async)!.length}})</a>
+      
+   
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
       <mat-icon>search</mat-icon>
     </button>
     <button mat-icon-button (click)="dataserv.previousPage()"><mat-icon>  arrow_back_ios </mat-icon></button>
+    <span>{{dataserv.pageNumber}}</span>
     <button mat-icon-button (click)="dataserv.nextPage()"><mat-icon> arrow_forward_ios </mat-icon></button>
+    <div class="search-container">
+      <input type="text" [(ngModel)]="searchTerm" (keyup.enter)="searchBooks()" placeholder="Cerca un libro...">
+      <button (click)="searchBooks()">Cerca</button>
+    </div>
+    
     
     
   </mat-toolbar>

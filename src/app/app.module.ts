@@ -8,6 +8,7 @@ import { BookComponent } from './components/book/book.component';
 import { MainComponent } from './components/main/main.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -15,6 +16,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { FavouritesComponent } from './components/favourites/favourites.component';
+
 
 
 @NgModule({
@@ -25,6 +28,8 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
     MainComponent,
     HeaderComponent,
     BookDetailsComponent,
+    FavouritesComponent,
+   
    
   ],
   imports: [
@@ -36,7 +41,8 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

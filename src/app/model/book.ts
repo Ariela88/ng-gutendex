@@ -17,6 +17,7 @@ export interface Root {
     media_type: string
     formats: Formats
     download_count: number
+    isFavourite:boolean
   }
   
   export interface Author {

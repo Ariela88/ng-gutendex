@@ -1,18 +1,21 @@
-<mat-card class="example-card" *ngIf="book" >
+
+<div class="book-container">
+<mat-card class="example-card" *ngIf="book" class="card" >
     <mat-card-header>
-      <mat-card-subtitle>{{book.authors[0]?.name}}</mat-card-subtitle>
-      <mat-card-subtitle>{{book.authors[0]?.birth_year}}</mat-card-subtitle>
-      <mat-card-subtitle>{{book.authors[0]?.death_year}}</mat-card-subtitle>
-      <mat-card-title>{{book.title}}</mat-card-title>
+      <mat-card-subtitle>Autore : {{book.authors[0].name}}</mat-card-subtitle>
+      <mat-card-subtitle>Anno di nascita: {{book.authors[0].birth_year}}</mat-card-subtitle>
+      <mat-card-subtitle>Anno di morte: {{book.authors[0].death_year}}</mat-card-subtitle>
+      <mat-card-title>Titolo: {{book.title}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <p>{{book.copyright}}</p>
-      <p>{{ book.languages }}</p>
-      <p>{{ book.subjects[0] }}</p>
-      <p>{{ book.subjects[1] }}</p>
-      <p>{{ book.subjects[2]}}</p>
-      <p>{{ book.subjects[3] }}</p>
-      <p>{{ book.subjects[4] }}</p>
+      
+      <p>Lingua: {{ book.languages }}</p>
+
+      <p> Genere: </p>
+      <ul *ngIf="book.subjects"> 
+        <li *ngFor="let sub of book.subjects"> {{sub}}</li>
+      </ul>
+      
       
     </mat-card-content>
     <mat-card-actions>
@@ -23,4 +26,4 @@
       
     </mat-card-footer>
   </mat-card>
-  
+   </div>

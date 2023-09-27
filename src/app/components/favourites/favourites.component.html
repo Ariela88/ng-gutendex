@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let book of favourites"  >
+      <app-book [books]="book"  [isFavourite]="true" bColor="green"></app-book>
+    </li>
+  </ul>

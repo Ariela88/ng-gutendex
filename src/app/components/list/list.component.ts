@@ -16,12 +16,16 @@ export class ListComponent {
 
   books:Book[]=[]
   authors:Author[]=[]
+  searchTerm: string = '';
 
   ngOnInit(): void {
     this.dataserv.allBooks.subscribe(book => this.books = book)
     
   }
 
-  
+  searchBooks() {
+    
+    this.dataserv.searchBooks(this.searchTerm);
+  }
 
 }
