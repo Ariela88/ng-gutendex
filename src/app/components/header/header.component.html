@@ -5,14 +5,14 @@
 
 
 
- <a routerLink="./favourites">I miei Preferiti ({{(storage.favouritesSubject | async)!.length}})</a>
+ <a routerLink="./favourites"> Favourites ({{(storage.favouritesSubject | async)!.length}})</a>
 
 
  <span class="title-header"><a routerLink="/home/">Gutendex </a> </span>
 
   <div class="search-container">
     <input type="text" [(ngModel)]="searchTerm" (keyup.enter)="searchBooks()" placeholder="Cerca un libro...">
-    <button (click)="searchBooks()"> Cerca </button>
+    <button (click)="searchBooks()" class="search-btn" > Cerca </button>
   </div>
 
 

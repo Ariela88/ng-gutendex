@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListComponent } from './components/list/list.component';
 import { BookComponent } from './components/book/book.component';
-import { MainComponent } from './components/main/main.component';
+
 import { HeaderComponent } from './components/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -25,7 +25,6 @@ import { FavouritesComponent } from './components/favourites/favourites.componen
     AppComponent,
     ListComponent,
     BookComponent,
-    MainComponent,
     HeaderComponent,
     BookDetailsComponent,
     FavouritesComponent,

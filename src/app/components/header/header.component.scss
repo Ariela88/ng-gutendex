@@ -3,20 +3,60 @@
     font-size: 80px;
 }
 
+.title-header:hover{
+
+    color: chocolate;
+}
+
+
 .toolbar{
     height: 20%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
 }
 
 .toolbar-subtitle{
     display: flex;
-    justify-content: center;
+    justify-content: end;
+    background-color: rgba(210, 105, 30, 0.162);
+    color: black;
+    padding-right: 80px;
+    margin: 0;
 }
 
 .btn-page-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.search-btn{
+    border: none;
+   
+
+
+}
+
+input{
+    outline: none;
+
+}
+
+.search-container{
+    display: flex;
+    gap: 8px;
+    
+}
+
+a{
+    font-family: 'Norican', cursive;
+}
+
+a:hover{
+
+    color: chocolate;
 }
 

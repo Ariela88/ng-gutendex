@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Norican&family=Playfair+Display&display=swap');
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+body { margin: 0; font-family: 'Playfair Display', serif;
+    background-image: url(./assets/bg1.jpg);
+    background-attachment: fixed; 
+    background-size: cover;
 background-color: rgb(47, 47, 47);}
 
 
@@ -9,3 +12,6 @@ a{
     text-decoration: none;
     color: initial;
 }
+
+
+
