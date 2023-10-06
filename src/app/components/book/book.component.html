@@ -5,13 +5,14 @@
     <mat-card-title>{{ books.title }}</mat-card-title>
   </mat-card-header>
   <mat-card-content>
+    <img mat-card-image src="{{books.formats['image/jpeg']}}" alt="BOOK COVER HERE">
     <p>{{ books.subjects[0] }}</p>
     <div class="spacer"></div>
     <hr>
   </mat-card-content>
   <mat-card-actions>
 
-    
+
     <a routerLink="/book-details/{{ books.id }}"><mat-icon> info</mat-icon></a>
     <button (click)="storage.toggleFavourites(books)">
       <mat-icon *ngIf="!storage.isFavourite(books)">favorite</mat-icon>
